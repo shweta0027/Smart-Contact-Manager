@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{'/css/output.css'}">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <!-- now gonna use tailwind -->
+    <!-- <style>
+        .container {
+            margin:auto;
+            width: 50%;
+            padding: 30px;
+            background-color: aqua;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="bg-fuchsia-400 w-1/2 p-4 mx-auto mt-4">
+        <!-- thymlead attribute to get data -->
+        <p data-th-text="${name}"> - youre my boss </p>
+   <p class=""> oyeee your page is working</p>
+   <!-- to make link redirecting to page -->
+   <a th:href="${githubRepo}"> click here
+   <!-- th:text data-th-href -->
+   </a>
+
+   
+    </div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</body>
+</html>
