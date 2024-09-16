@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base ::parent(~{::#content}, ~{::title}, ~{::script})}">
+<head>
+    <title>
+        login page bro
+    </title>
+</head>
+<body>
+    <div id="content">
+        <div class="grid grid-cols-12 mt-4">
+            <!-- trick to bring card in centre this div will take first 4 -->
+            <div class="col-span-4 md:col-span-2 lg:col-span-3 xl:col-span-4"></div>
+            <!-- 6 out of 12 space will be taken by this -->
+            <div class="col-span-4 md:col-span-8 lg:col-span-6 xl:col-span-4">
+
+                <!-- card -->
+                        
+<div href="#" class="block  p-6 border-t-8 border-gray-800 bg-white rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-blue-800 dark:hover:bg-gray-700">
+     <!-- message alert here -->
+     <div data-th-replace="message::messagebox"></div>
+     
+    <h5 class="flex justify-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Login Here
+    </h5>
+    <!-- <p class="font-normal text-gray-700 dark:text-gray-400">
+        Here are the biggest enterprise
+    </p> -->
+
+
+    <div class="text-red-600 font-semibold text-center my-2" th:if="${param.error}">
+        Invalid username and password.</div>
+    <div  class="text-green-500 font-semibold text-center my-2"  th:if="${param.logout}">
+        You have been logged out.</div>
+    <!-- form -->
+    <form 
+    method="post"
+    data-th-action="@{'/authenticate'}"
+    class="max-w-sm mx-auto"
+    novalidate
+    >
+        <!-- post-data wont go in url but will go in body -->
+
+        <!-- username email feild -->
+     
+            <div class="mb-3">
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+              <input type="email"
+                name="email"
+               id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+               placeholder="Enter Email here" 
+               required />
+
+                <!-- need to show this only when there are errors -->
+          <!-- <p
+          data-th-if="${#fields.hasErrors('email')}" 
+          data-th-errors="*{email}"
+          class="text-sm font-semibold text-red-600 px-1">
+          </p> -->
+            </div>
+
+           <!-- password -->
+           <div class="mb-3">
+            <label 
+            for="email" 
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            New Password
+            </label>
+            <input 
+            name="password"
+            type="password" 
+            id="password" 
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+            required />
+
+                     <!-- need to show this only when there are errors -->
+          <!-- <p
+          data-th-if="${#fields.hasErrors('password')}" 
+          data-th-errors="*{password}"
+          class="text-sm font-semibold text-red-600 px-1">
+          </p> -->
+          </div>
+
+          <!-- submit button -->
+          <div class="mb-3 flex justify-center space-x-3">
+            <button type="submit"
+            class="w-full px-5 py-2 rounded bg-blue-700 text-white hover:bg-blue-800">LOGIN</button>
+
+            <button type="reset"
+            class="w-full py-2 rounded bg-orange-700 text-white hover:bg-orange-900">RESET</button>
+          </div>
+
+          
+
+    </form>
+     <div class="flex justify-center font-semibold"><p>OR</p></div>
+    <div class="social-buttons-container flex justify-center">
+      <a 
+      class="login-with-google-btn px-2" data-th-href="@{'/oauth2/authorization/google'}">
+      Login with google</a>
+    </div>
+</div>
+    
+
+</div>
+
+        </div>
+    </div>
+
+
+    <script>
+        console.log(" login page")
+    </script>
+     <script>
+        console.log("2. login page")
+    </script>
+</body>
+</html>

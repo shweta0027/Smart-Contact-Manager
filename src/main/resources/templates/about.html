@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base ::parent(~{::#content}, ~{::title}, ~{::script})}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>
+        about page bro
+    </title>
 </head>
 <body>
-    <h1>this is about page</h1>
-    <!-- using fragment -->
-    <!-- base is file name and arent is fragment name -->
-    <div th:insert="~{base::parent(~{::p})}">
-        <p>
-            this is dyno content
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio vel sint iusto, error eos veniam temporibus voluptatem ipsum quia. Numquam?
-        </p>
-
+    <div id="content">
+        <h1>welcome to about page</h1>
     </div>
+    <script>
+        console.log("about page")
+    </script>
+     <script>
+        console.log("2.about page")
+    </script>
 </body>
 </html>
