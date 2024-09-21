@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base ::parent(~{::#content}, ~{::title}, ~{::script})}">
+<head>
+    <title>
+       profile page 
+    </title>
+</head>
+<body>
+    <!-- class="pl-64 pt-50"  -->
+    <div  id="content">
+        
+        <!-- sidebar -->
+               <!-- if user is logged in user-navbar will be shown -->
+    <div th:if="${loggedinUser}">
+        <div data-th-replace="~{user/sidebar::sidebar}">
+        </div>
+    </div> 
+        
+
+    <div class="sm:pl-64 pt-20">
+        <div class="flex justify-center flex-col items-center mb-5">
+        <h1 class="text-3xl font-semibold">WELCOME TO YOUR PROFILE</h1>
+       
+        </div>
+
+        <!-- flowbite -->
+         
+<div class="flex justify-center">
+<div class="items-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img 
+        onerror="this.onerror=null; this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'"
+              data-th-src="@{${loggedinUser.profilePic}}"
+        class="rounded-t-lg h-40 sm:h-56"  alt="" />
+    </a>
+    <div class="p-5 flex flex-col items-center ps-2.5 ">
+        <span class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white" data-th-text="${loggedinUser.name}">
+            Shweta Kotharkar</span>
+            <span class="text-gray-700 dark:text-gray-400" data-th-text="${loggedinUser.email}">Shweta Kotharkar</span>
+            <span class="text-gray-700 dark:text-gray-400" data-th-text="${loggedinUser.phoneNo}">Shweta Kotharkar</span>
+            <span class="text-gray-700 dark:text-gray-400" data-th-text="${loggedinUser.about}">Shweta Kotharkar</span>         
+    </div>
+</div>
+</div>
+<!--  -->
+
+
+    </div>
+</div>
+    <script>
+        console.log("profile page")
+    </script>
+</body>
+</html>

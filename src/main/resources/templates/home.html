@@ -1,36 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base ::parent(~{::#content}, ~{::title}, ~{::script})}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" th:href="@{'/css/output.css'}">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
-
-    <!-- now gonna use tailwind -->
-    <!-- <style>
-        .container {
-            margin:auto;
-            width: 50%;
-            padding: 30px;
-            background-color: aqua;
-        }
-    </style> -->
+    <title>
+       home page bro
+    </title>
 </head>
 <body>
-    <div class="bg-fuchsia-400 w-1/2 p-4 mx-auto mt-4">
-        <!-- thymlead attribute to get data -->
-        <p data-th-text="${name}"> - youre my boss </p>
-   <p class=""> oyeee your page is working</p>
-   <!-- to make link redirecting to page -->
-   <a th:href="${githubRepo}"> click here
-   <!-- th:text data-th-href -->
-   </a>
+    <div id="content">
 
-   
+    <!-- <div class="flex flex-row">     
+        <div class="text-3xl ">
+            <h1>MANAGE YOUR CONTACTS <BR> WITH EASE</h1>
+        </div>
+       
+        <div class="flex justify-end">
+            <img 
+            class="h-96 w-1/2"
+            data-th-src="@{'/images/hero.png'}"
+            alt="Logo" />
+        </div>
+    </div> -->
+
+    <!-- min-h-screen -->
+    <div class="mt-16">
+    <div class="flex flex-col items-center justify-center ">
+        <div class="container mx-auto px-4 ">
+            <div class="flex flex-col md:flex-row items-center">
+                
+                <!-- Text Section -->
+                <div class="md:w-1/2 text-left">
+                    <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Organize Your Contacts, Simplify Your Network</h1>
+                    <p class="text-gray-700 mb-4 dark:text-gray-400">
+                        Effortless contact management to stay connected and grow your relationships. 
+                        Our platform is designed with simplicity in mind, so you can manage your network with ease.
+                        We offer a scalable solution that adapts to your needs.
+                    </p>
+                    <p class="text-gray-700 mb-4 dark:text-gray-400">
+                        Start managing your network efficiently today!
+                    </p>
+                    <a 
+                    data-th-href="@{'/register'}" 
+                    class="bg-blue-700 text-white py-2 px-4 rounded-md hover:bg-blue-900">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Image Section -->
+                <div 
+                    class="md:w-1/2 mt-8 md:mt-0 md:ml-6 ">
+                    <img 
+                    data-th-src="@{'/images/hero.png'}"
+                     alt="Placeholder image" 
+                     class="rounded-lg shadow-lg h-96 w-full ">
+                </div>
+
+            </div>
+        </div>
     </div>
-   
+</div>
+    <!--  -->
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+    </div>
+    <script>
+        console.log("home page")
+    </script>
+     <script>
+        console.log("2.home page")
+    </script>
 </body>
 </html>
