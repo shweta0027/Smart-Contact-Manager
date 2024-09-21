@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "scm",
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "disabled"
+	}
+}

@@ -16,4 +16,6 @@ public interface UserService {
 
     //add more methods
     User getUserByEmail(String email);
+
+    
 }

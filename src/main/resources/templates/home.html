@@ -7,7 +7,60 @@
 </head>
 <body>
     <div id="content">
-        <h1>welcome to home page</h1>
+
+    <!-- <div class="flex flex-row">     
+        <div class="text-3xl ">
+            <h1>MANAGE YOUR CONTACTS <BR> WITH EASE</h1>
+        </div>
+       
+        <div class="flex justify-end">
+            <img 
+            class="h-96 w-1/2"
+            data-th-src="@{'/images/hero.png'}"
+            alt="Logo" />
+        </div>
+    </div> -->
+
+    <!-- min-h-screen -->
+    <div class="mt-16">
+    <div class="flex flex-col items-center justify-center ">
+        <div class="container mx-auto px-4 ">
+            <div class="flex flex-col md:flex-row items-center">
+                
+                <!-- Text Section -->
+                <div class="md:w-1/2 text-left">
+                    <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Organize Your Contacts, Simplify Your Network</h1>
+                    <p class="text-gray-700 mb-4 dark:text-gray-400">
+                        Effortless contact management to stay connected and grow your relationships. 
+                        Our platform is designed with simplicity in mind, so you can manage your network with ease.
+                        We offer a scalable solution that adapts to your needs.
+                    </p>
+                    <p class="text-gray-700 mb-4 dark:text-gray-400">
+                        Start managing your network efficiently today!
+                    </p>
+                    <a 
+                    data-th-href="@{'/register'}" 
+                    class="bg-blue-700 text-white py-2 px-4 rounded-md hover:bg-blue-900">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Image Section -->
+                <div 
+                    class="md:w-1/2 mt-8 md:mt-0 md:ml-6 ">
+                    <img 
+                    data-th-src="@{'/images/hero.png'}"
+                     alt="Placeholder image" 
+                     class="rounded-lg shadow-lg h-96 w-full ">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <!--  -->
+
+
     </div>
     <script>
         console.log("home page")

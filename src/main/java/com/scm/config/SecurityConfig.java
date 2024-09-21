@@ -53,6 +53,9 @@ public class SecurityConfig {
     @Autowired
     private OAuthAuthenticationHandler handler;
 
+    @Autowired
+    private AuthFailureHandler authFailureHandler;
+
     //configuration of authentication provider
     @Bean
    public AuthenticationProvider authenticationProvider(){
@@ -107,6 +110,10 @@ public class SecurityConfig {
         //     }
             
         //    });
+        //
+
+        //to handle disabled user
+        formLogin.failureHandler(authFailureHandler);
 
     });
        

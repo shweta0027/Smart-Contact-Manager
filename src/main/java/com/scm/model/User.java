@@ -48,7 +48,7 @@ public class User implements UserDetails{
    
     //information
     @Getter(value=AccessLevel.NONE) //exclude from create getter by lombok
-    private boolean enabled=true;
+    private boolean enabled=false;
     private boolean emailVerified=false;
     private boolean phoneVerified=false;
 
@@ -58,7 +58,7 @@ public class User implements UserDetails{
     private String providerUserId;
 
     //add more if needed
-
+    
     //one user have many contacts
     //when we specify mappedby seprate col will be created
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch=FetchType.LAZY, orphanRemoval = true) //if user is deleted contact will  get deleted to
@@ -67,6 +67,8 @@ public class User implements UserDetails{
     @ElementCollection(fetch=FetchType.EAGER)
     private List<String> roleList = new ArrayList<>(); //user can have multiple role
 
+    //to store token
+    private String emailToken;
 
     @Override  //used when which user has which role
     public Collection<? extends GrantedAuthority> getAuthorities() {

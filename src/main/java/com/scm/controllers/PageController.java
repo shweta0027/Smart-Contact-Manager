@@ -101,7 +101,8 @@ public class PageController {
       user.setPassword(userForm.getPassword());
       user.setAbout(userForm.getAbout());
       user.setPhoneNo(userForm.getPhoneNumber());
-      user.setProfilePic("https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg");
+      user.setEnabled(false);
+      user.setProfilePic("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png");
 
       User savedUser=userService.saveUser(user);
       System.out.println("saved user....");

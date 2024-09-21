@@ -9,7 +9,7 @@ xmlns:th="http://www.thymeleaf.org">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-th-replace="${title}">Document</title>
 
-    
+    <!-- flowbite -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" th:href="@{'/css/output.css'}">
     <link rel="stylesheet" th:href="@{'/css/style.css'}">
@@ -19,6 +19,7 @@ xmlns:th="http://www.thymeleaf.org">
      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
      crossorigin="anonymous" 
      referrerpolicy="no-referrer" />
+     
 </head>
 
 <body class="dark:bg-gray-900 bg-gray-100 dark:text-white">
@@ -54,6 +55,8 @@ xmlns:th="http://www.thymeleaf.org">
     
     <!-- flowbite content -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- script to change theme -->
     <script data-th-src="@{'/javascript/script.js'}"> </script>
     <th:block data-th-replace="${script}"></th:block>
